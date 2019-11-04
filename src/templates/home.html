@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Home</h1>
+
+{% for art in articles %}
+    <a href='{{  art.get_absolute_url  }}'>{{ art.title }}</a><br>
+{% endfor %}
+
+{% endblock %}
