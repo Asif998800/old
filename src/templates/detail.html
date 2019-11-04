@@ -4,6 +4,9 @@
 <h1>Detail Article</h1>
 
 <h3>{{ article.title }}</h3>
+{% for cat in article.category.all %}
+{{ cat.name }}
+{% endfor %}
 <p>{{ article.content }}</p>
 
 {% endblock %}
