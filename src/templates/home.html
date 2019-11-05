@@ -2,6 +2,7 @@
 
 {% block content %}
 <h1>Home</h1>
+<a href="{% url 'create_article' %}">New</a><br><br>
 
 {% for art in articles %}
     <a href='{{  art.get_absolute_url  }}'>{{ art.title }}</a><br>

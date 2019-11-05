@@ -8,5 +8,9 @@
 {{ cat.name }}
 {% endfor %}
 <p>{{ article.content }}</p>
+<br><br>
+{% if article %}
+  <a href="{% url 'delete_article' article.id %}">Delete</a>
+{% endif %}
 
 {% endblock %}
